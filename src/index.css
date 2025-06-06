@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Add this to your main CSS file */
+.dark body {
+  @apply text-white bg-gray-900;
+}
+/* index.css */
+body.light {
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+body.dark {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+/* Optional: styles for prose (markdown) content */
+.prose {
+  color: #374151; /* gray-800 */
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: #111827; /* gray-900 */
+}
+
+.dark .prose {
+  color: #d1d5db; /* gray-300 */
+}
+
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4,
+.dark .prose h5,
+.dark .prose h6 {
+  color: #f9fafb; /* gray-50 */
+}
