@@ -42,7 +42,6 @@ export const logoutUser = createAsyncThunk("auth/logoutUser", async () => {
   await localforage.removeItem("user");
   return null;
 });
-
 export const loadUserFromStorage = createAsyncThunk(
   "auth/loadUserFromStorage",
   async (_, { rejectWithValue }) => {
