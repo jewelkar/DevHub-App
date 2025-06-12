@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const developerApi = createApi({
   reducerPath: "developerApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001/" }), // Ensure JSON Server is running
+  baseQuery: fetchBaseQuery({ baseUrl: "https://devhub-app.onrender.com/" }), // Ensure JSON Server is running
   endpoints: (builder) => ({
     getDevelopers: builder.query({
       query: ({ page = 1, limit = 10, search = "", language = "" }) => {

@@ -15,7 +15,7 @@ export const loginUser = createAsyncThunk(
   async ({ username, password }, { rejectWithValue }) => {
     try {
       // Mock API call
-      const response = await fetch("http://localhost:3001/users");
+      const response = await fetch("https://devhub-app.onrender.com/users");
       const users = await response.json();
       const user = users.find(
         (u) => u.username === username && u.password === password
